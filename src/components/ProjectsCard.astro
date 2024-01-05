@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+import Card from "./Card/index.astro";
+import ProjectPulse from "./ProjectPulse.astro";
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col gap-1">
+      <h2 class="text-xl font-bold m-0 z-20">Projects</h2>
+
+      <div class="flex-col flex justify-initial">
+        <a href="https://simply-search.vercel.app/" class=""
+          >Simply Search <Icon
+            name="ri:arrow-right-up-line"
+            class="mx-1 h-6 float-right group-hover:text-primary-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ease-in-out duration-100 z-20"
+          />
+        </a>
+      </div>
+      <p class="text-xs text-gray-500">
+        A simple vector search engine for HKUST webpages
+      </p>
+    </div>
+    <ProjectPulse />
+  </div>
+</Card>
