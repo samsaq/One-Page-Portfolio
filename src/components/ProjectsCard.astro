@@ -6,21 +6,53 @@ import ProjectPulse from "./ProjectPulse.astro";
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
   <div class="flex justify-between w-full items-start mb-2">
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-1 w-full">
       <h2 class="text-xl font-bold m-0 z-20">Projects</h2>
 
       <div class="flex-col flex justify-initial">
-        <a href="https://simply-search.vercel.app/" class=""
-          >Simply Search <Icon
+        <a
+          href="https://simply-search.vercel.app/"
+          class="flex justify-between items-center w-full"
+          data-project-link
+        >
+          <span>Simply Search</span>
+          <Icon
             name="ri:arrow-right-up-line"
-            class="mx-1 h-6 float-right group-hover:text-primary-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ease-in-out duration-100 z-20"
+            class="h-6 transition-transform ease-in-out duration-100 z-20"
+            data-project-arrow
+          />
+        </a>
+      </div>
+      <p class="text-xs text-gray-500">A simple vector search engine</p>
+
+      <div class="flex-col flex justify-initial">
+        <a
+          href="https://www.zzz-optimizer.net/"
+          class="flex justify-between items-center w-full"
+          data-project-link
+        >
+          <span>ZZZ-Optimizer</span>
+          <Icon
+            name="ri:arrow-right-up-line"
+            class="h-6 transition-transform ease-in-out duration-100 z-20"
+            data-project-arrow
           />
         </a>
       </div>
       <p class="text-xs text-gray-500">
-        A simple vector search engine for HKUST webpages
+        A CRT themed web optimizer to pair with <a
+          href="https://github.com/samsaq/ZZZ-Scanner/"
+          class="underline">ZZZ-Scanner</a
+        >
       </p>
     </div>
     <ProjectPulse />
   </div>
 </Card>
+
+<style>
+  [data-project-link]:hover [data-project-arrow] {
+    color: #e63946; /* Red color for the arrow */
+    transform: translate(0.25rem, -0.25rem);
+  }
+</style>
